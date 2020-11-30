@@ -11,7 +11,8 @@ Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 # Participating
 
 1. Register with [Advent of Code 2020](https://adventofcode.com/2020) using your Github account
-2. Create a pull request adding in your Rust package
+2. Raise an issue letting me know you want to join, I'll have to add you to the project
+3. Create a pull request adding in your Rust package
     1. clone this repository
     2. navigate into the root of the repository
     3. `cargo new <name>`
