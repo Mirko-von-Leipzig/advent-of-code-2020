@@ -1,5 +1,5 @@
 # Introduction
-Learning Rust by solving Advent of Code 2020
+Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 
 # Table of Contents
 - [Getting setup](#getting-setup)
@@ -7,6 +7,18 @@ Learning Rust by solving Advent of Code 2020
   - [Tools](#tools)
 - [Resources](#resources)
 - [Code Organisation](#code-organisation)
+
+# Participating
+
+1. Register with [Advent of Code 2020](https://adventofcode.com/2020) using your Github account
+2. Create a pull request adding in your Rust package
+    1. clone this repository
+    2. navigate into the root of the repository
+    3. `cargo new <name>`
+    4. add `<name>` to the members of the workspace in `<root>/Cargo.toml`
+    5. create a pull-request with these changes
+3. Once the pull-request has been accepted you will have access
+4. Feel free to raise any questions as issues
 
 # Getting setup
 
