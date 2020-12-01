@@ -63,7 +63,7 @@ impl ExpenseReport {
         // that my function states I am taking (and keeping) entries.
         // The caller won't be able to use entries after this
         // (he doesn't get it back).
-        entries.sort();
+        entries.sort_unstable();
 
         // In general you can construct a struct T by
         // T {
