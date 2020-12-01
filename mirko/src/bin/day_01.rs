@@ -81,15 +81,13 @@ impl ExpenseReport {
     // It returns an optional tuple of two u32s (aka a pair).
     fn find_pair(entries: &[u32], target: u32) -> Option<(u32, u32)> {
         for entry in entries {
-            if *entry <= target {
-                if entries.contains(&(target - entry)) {
-                    // Note the double brackets, inner brackets for the tuple pair,
-                    // outer brackets to construct the Option
-                    //
-                    // We use an explicit return here. It is idiomatic to not use return
-                    // when possible, but early returns require it.
-                    return Some((*entry, target - entry));
-                }
+            if *entry <= target && entries.contains(&(target - entry)) {
+                // Note the double brackets, inner brackets for the tuple pair,
+                // outer brackets to construct the Option
+                //
+                // We use an explicit return here. It is idiomatic to not use return
+                // when possible, but early returns require it.
+                return Some((*entry, target - entry));
             }
         }
 
