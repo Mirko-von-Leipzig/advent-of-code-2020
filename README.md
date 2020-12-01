@@ -1,33 +1,41 @@
-# Introduction
+# Advent of Code 2020
+
 Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 
-# Table of Contents
-- [Getting setup](#getting-setup)
-  - [VSCode Extensions](#vscode-extensions)
-  - [Tools](#tools)
-- [Resources](#resources)
-- [Code Organisation](#code-organisation)
+## Table of Contents
 
-# Participating
+- [Advent of Code 2020](#advent-of-code-2020)
+  - [Table of Contents](#table-of-contents)
+  - [Participating](#participating)
+  - [Getting setup](#getting-setup)
+    - [VSCode Extensions](#vscode-extensions)
+    - [Tools](#tools)
+  - [Resources](#resources)
+  - [Code Organisation](#code-organisation)
+  - [Continuous Integration](#continuous-integration)
+
+## Participating
 
 1. Register with [Advent of Code 2020](https://adventofcode.com/2020) using your Github account
 2. Raise an issue letting me know you want to join, I'll have to add you to the project
 3. Create a pull request adding in your Rust package
+
     1. clone this repository
     2. navigate into the root of the repository
     3. `cargo new <name>`
     4. add `<name>` to the members of the workspace in `<root>/Cargo.toml`
     5. create a pull-request with these changes
-3. Once the pull-request has been accepted you will have access
-4. Feel free to raise any questions as issues
 
-# Getting setup
+4. Once the pull-request has been accepted you will have access
+5. Feel free to raise any questions as issues
+
+## Getting setup
 
 We will be using the Rust programming language and VSCode as our editor.
 
 You can obtain Rust from [here](https://www.rust-lang.org/learn/get-started) and VSCode [here](https://code.visualstudio.com/).
 
-## VSCode Extensions
+### VSCode Extensions
 
 You should install the following extensions in VSCode:
 
@@ -43,7 +51,7 @@ You should install the following extensions in VSCode:
 
 Please do **NOT** install the RLS extension if prompted -- this is the old original Rust extension that is vastly exceeded by rust-analyzer. Remove it if you do have it for some reason.
 
-## Tools
+### Tools
 
 Rust comes with tools that are expected of a modern language, which are used universally in the ecosystem. These may come pre-installed, but just in-case please add the Rust formatter (`rustfmt`) and linter (`clippy`) by executing
 
@@ -51,13 +59,15 @@ Rust comes with tools that are expected of a modern language, which are used uni
 2. `rustup component add clippy`
 
 In addition, the `rust-analyzer` extension may need to be configured to invoke the linter on save. Find the setting
+
 ```
 Rust-analyzer › Check On Save: Command
 Cargo command to use for cargo check
 ```
+
 and change it to `clippy`.
 
-# Resources
+## Resources
 
 | Resource  | Description |
 | :-------- | :---------- |
@@ -67,7 +77,7 @@ and change it to `clippy`.
 | [docs.rs](https://docs.rs/) | Library documentation |
 | [lib.rs](https://lib.rs/) | Search engine for libraries |
 
-# Code Organisation
+## Code Organisation
 
 We will use a Rust workspace to combine each participants code into one big package. This will allow us to selectively share code, and still keep the rest separate. A workspace effectively acts as the root of a multi-package setup. The root `Cargo.toml` specifies the members of the workspace -- you can see the `mirko` member (which links the Rust package in `mirko` to the workspace). The `mirko` folder contains its own Rust package as defined in the `mirko/Cargo.toml` file.
 
@@ -94,3 +104,12 @@ src
 └── cargo.toml
 ```
 
+## Continuous Integration
+
+We have a CI workflow which runs on every push and pull-request. The `main` branch is protected by this workflow.
+
+It includes the following checks:
+
+- linting
+- formatting
+- testing
