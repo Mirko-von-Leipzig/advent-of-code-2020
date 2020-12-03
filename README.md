@@ -4,15 +4,14 @@ Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 
 ## Table of Contents
 
-- [Advent of Code 2020](#advent-of-code-2020)
-  - [Table of Contents](#table-of-contents)
-  - [Participating](#participating)
-  - [Getting setup](#getting-setup)
-    - [VSCode Extensions](#vscode-extensions)
-    - [Tools](#tools)
-  - [Resources](#resources)
-  - [Code Organisation](#code-organisation)
-  - [Continuous Integration](#continuous-integration)
+- [Table of Contents](#table-of-contents)
+- [Participating](#participating)
+- [Getting setup](#getting-setup)
+  - [VSCode Extensions](#vscode-extensions)
+  - [Tools](#tools)
+- [Resources](#resources)
+- [Code Organisation](#code-organisation)
+- [Continuous Integration](#continuous-integration)
 
 ## Participating
 
