@@ -1,3 +1,4 @@
+
 use std::{num::ParseIntError, fs};
 
 const YEAR: u32 = 2020;
