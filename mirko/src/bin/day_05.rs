@@ -19,9 +19,17 @@ fn main() {
     let i1 = seat_ids.iter();
     let i2 = i1.clone().skip(1);
 
-    let (id1, id2) = i1.zip(i2).find(|(&first, &second)| first + 2 == second).unwrap();
+    let (id1, id2) = i1
+        .zip(i2)
+        .find(|(&first, &second)| first + 2 == second)
+        .unwrap();
 
-    println!("hopefully between seats {} and {} i.e. {}", id1, id2, id2-1);
+    println!(
+        "hopefully between seats {} and {} i.e. {}",
+        id1,
+        id2,
+        id2 - 1
+    );
 }
 
 #[allow(dead_code)]
