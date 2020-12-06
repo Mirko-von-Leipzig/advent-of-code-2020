@@ -12,7 +12,7 @@ fn main() {
     let tree_product: usize = counts.iter().product();
 
     for (i, count) in counts.iter().enumerate() {
-        println!("slope {}: {}", i+1, count);
+        println!("slope {}: {}", i + 1, count);
     }
 
     println!("For a total product of {}", tree_product);
