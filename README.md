@@ -4,7 +4,6 @@ Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Participating](#participating)
 - [Getting setup](#getting-setup)
   - [VSCode Extensions](#vscode-extensions)
