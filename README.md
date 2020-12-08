@@ -11,6 +11,7 @@ Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 - [Resources](#resources)
 - [Code Organisation](#code-organisation)
 - [Continuous Integration](#continuous-integration)
+- [Progress](#progress)
 
 ## Participating
 
@@ -111,3 +112,16 @@ It includes the following checks:
 - linting
 - formatting
 - testing
+
+## Progress
+
+| Day |     Mirko    |     Malan    |     Evert    |
+| :-: | :----------: | :----------: | :----------: |
+| 01  | :star::star: |              |              |
+| 02  | :star::star: |              |              |
+| 03  | :star::star: |              |              |
+| 04  | :star::star: |              |              |
+| 05  | :star::star: |              |              |
+| 06  | :star::star: |              |              |
+| 07  |              |              |              |
+| 08  |              |              |              |
