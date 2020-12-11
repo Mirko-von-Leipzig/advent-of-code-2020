@@ -126,6 +126,6 @@ It includes the following checks:
 | 05  | :star::star: |              |              |
 | 06  | :star::star: |              |              |
 | 07  | :star::star: |              |              |
-| 08  |              |              |              |
+| 08  | :star::star: |              |              |
 | 09  |              |              |              |
 | 10  |              |              |              |
