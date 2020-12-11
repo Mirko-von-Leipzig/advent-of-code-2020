@@ -4,14 +4,16 @@ Learning Rust by solving [Advent of Code 2020](https://adventofcode.com/2020)
 
 ## Table of Contents
 
-- [Participating](#participating)
-- [Getting setup](#getting-setup)
-  - [VSCode Extensions](#vscode-extensions)
-  - [Tools](#tools)
-- [Resources](#resources)
-- [Code Organisation](#code-organisation)
-- [Continuous Integration](#continuous-integration)
-- [Progress](#progress)
+- [Advent of Code 2020](#advent-of-code-2020)
+  - [Table of Contents](#table-of-contents)
+  - [Participating](#participating)
+  - [Getting setup](#getting-setup)
+    - [VSCode Extensions](#vscode-extensions)
+    - [Tools](#tools)
+  - [Resources](#resources)
+  - [Code Organisation](#code-organisation)
+  - [Continuous Integration](#continuous-integration)
+  - [Progress](#progress)
 
 ## Participating
 
@@ -123,7 +125,7 @@ It includes the following checks:
 | 04  | :star::star: |              |              |
 | 05  | :star::star: |              |              |
 | 06  | :star::star: |              |              |
-| 07  |              |              |              |
+| 07  | :star::star: |              |              |
 | 08  |              |              |              |
 | 09  |              |              |              |
 | 10  |              |              |              |
