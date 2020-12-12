@@ -128,6 +128,6 @@ It includes the following checks:
 | 07  | :star::star: |              |              |
 | 08  | :star::star: |              |              |
 | 09  | :star::star: |              |              |
-| 10  |              |              |              |
+| 10  | :star::star: |              |              |
 | 11  |              |              |              |
 | 12  |              |              |              |
