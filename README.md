@@ -127,5 +127,5 @@ It includes the following checks:
 | 06  | :star::star: |              |              |
 | 07  | :star::star: |              |              |
 | 08  | :star::star: |              |              |
-| 09  |              |              |              |
+| 09  | :star::star: |              |              |
 | 10  |              |              |              |
