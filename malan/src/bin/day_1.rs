@@ -1,13 +1,20 @@
-use std::{fs, num::ParseIntError};
+use std::num::ParseIntError;
 
 const YEAR: u32 = 2020;
 
 fn main() {
-    // Read in the file contents
-    let file_string = fs::read_to_string("../inputs/01.txt").expect("file open failed");
+    println!("Day 1");
+    let _input_string = include_str!("../inputs/01.txt");
+    puzzle_1(_input_string);
+    puzzle_2(_input_string);
+}
+
+fn puzzle_1(input: &str) {
+
+    println!("Running Puzzle 1");
 
     // Split string into lines, and map each substring to u32. Collect into vec
-    let entries = file_string
+    let entries = input
         .lines()
         .map(|line| line.parse::<u32>())
         .collect::<Result<Vec<u32>, ParseIntError>>()
@@ -18,11 +25,45 @@ fn main() {
     } else {
         println!("No matching entries found")
     };
+}
+
+fn puzzle_2(input: &str) {
+    println!("Running Puzzle 2");
+
+        // Split string into lines, and map each substring to u32. Collect into vec
+    let entries = input
+    .lines()
+    .map(|line| line.parse::<u32>())
+    .collect::<Result<Vec<u32>, ParseIntError>>()
+    .expect("string parsing error");
 
     if let Some(answer) = find_triple_answer(&entries, YEAR) {
         println!("{}", answer);
     } else {
         println!("No answer found for part 2.");
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::YEAR;
+
+    #[test]
+    fn test_puzzle_1() {
+        let input = vec![1721, 979 ,366, 299, 675, 1456];
+        let expected = 514579;
+
+        let response = super::find_pair(&input, YEAR).expect("Function failed");
+        assert!(expected == response.0 * response.1);
+    }
+
+    #[test]
+    fn test_puzzle_2() {
+        let input = vec![1721, 979 ,366, 299, 675, 1456];
+        let expected = 241861950;
+
+        let response = super::find_triple_answer(&input, YEAR).expect("Function failed");
+        assert!(expected == response);
     }
 }
 
