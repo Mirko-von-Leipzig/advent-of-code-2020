@@ -5,12 +5,12 @@ fn main() {
     puzzle_2(_input_string);
 }
 
-fn puzzle_1(input: &str) {
-    println!("Running Puzzle 1\n{}", input);
+fn puzzle_1(_input: &str) {
+    println!("Running Puzzle 1\n{}", _input);
 }
 
-fn puzzle_2(input: &str) {
-    println!("Running Puzzle 2\n{}", input);
+fn puzzle_2(_input: &str) {
+    println!("Running Puzzle 2\n{}", _input);
 }
 
 #[cfg(test)]
