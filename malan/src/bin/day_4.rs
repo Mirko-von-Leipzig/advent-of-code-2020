@@ -15,7 +15,7 @@ fn puzzle_2(_input: &str) {
 
 #[cfg(test)]
 mod tests {
-    
+
     #[test]
     fn test_puzzle_1() {}
 

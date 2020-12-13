@@ -1,4 +1,4 @@
-use  regex::Regex;
+use regex::Regex;
 
 struct Policy {
     required_char: char,
@@ -32,7 +32,6 @@ fn puzzle_1(input: &str) {
 }
 
 fn puzzle_2(input: &str) {
-
     println!("Running Puzzle 2");
     let mut correct_2: u32 = 0;
     // loop over the lines of the input file
@@ -57,9 +56,21 @@ mod tests {
 
     #[test]
     fn test_puzzle_1() {
-        let policy1 = Policy {required_char: 'a', min_count: 1, max_count: 3};
-        let policy2 = Policy {required_char: 'b', min_count: 1, max_count: 3};
-        let policy3 = Policy {required_char: 'c', min_count: 2, max_count: 9};
+        let policy1 = Policy {
+            required_char: 'a',
+            min_count: 1,
+            max_count: 3,
+        };
+        let policy2 = Policy {
+            required_char: 'b',
+            min_count: 1,
+            max_count: 3,
+        };
+        let policy3 = Policy {
+            required_char: 'c',
+            min_count: 2,
+            max_count: 9,
+        };
 
         assert!(verify_password_1("abcde", &policy1));
         assert!(!verify_password_1("cdefg", &policy2));
@@ -68,16 +79,27 @@ mod tests {
 
     #[test]
     fn test_puzzle_2() {
-        let policy1 = Policy {required_char: 'a', min_count: 1, max_count: 3};
-        let policy2 = Policy {required_char: 'b', min_count: 1, max_count: 3};
-        let policy3 = Policy {required_char: 'c', min_count: 2, max_count: 9};
+        let policy1 = Policy {
+            required_char: 'a',
+            min_count: 1,
+            max_count: 3,
+        };
+        let policy2 = Policy {
+            required_char: 'b',
+            min_count: 1,
+            max_count: 3,
+        };
+        let policy3 = Policy {
+            required_char: 'c',
+            min_count: 2,
+            max_count: 9,
+        };
 
         assert!(verify_password_2("abcde", &policy1));
         assert!(!verify_password_2("cdefg", &policy2));
         assert!(!verify_password_2("ccccccccc", &policy3));
     }
 }
-
 
 // Should not really be an Option, but learning
 fn extract_policy(line: &str) -> Option<Policy> {
@@ -102,14 +124,18 @@ fn extract_password(line: &str) -> &str {
 }
 
 fn verify_password_1(password: &str, policy: &Policy) -> bool {
-    let count = password.chars().filter(|c| c == &policy.required_char).count();
+    let count = password
+        .chars()
+        .filter(|c| c == &policy.required_char)
+        .count();
     count >= policy.min_count && count <= policy.max_count
 }
 
 fn verify_password_2(password: &str, policy: &Policy) -> bool {
     let mut initial = false;
     for (ind, ch) in password.char_indices() {
-        initial ^= (ind+1 == policy.min_count || ind+1 == policy.max_count) && (ch == policy.required_char);
+        initial ^= (ind + 1 == policy.min_count || ind + 1 == policy.max_count)
+            && (ch == policy.required_char);
     }
     initial
 }

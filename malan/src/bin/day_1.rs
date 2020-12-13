@@ -10,7 +10,6 @@ fn main() {
 }
 
 fn puzzle_1(input: &str) {
-
     println!("Running Puzzle 1");
 
     // Split string into lines, and map each substring to u32. Collect into vec
@@ -30,12 +29,12 @@ fn puzzle_1(input: &str) {
 fn puzzle_2(input: &str) {
     println!("Running Puzzle 2");
 
-        // Split string into lines, and map each substring to u32. Collect into vec
+    // Split string into lines, and map each substring to u32. Collect into vec
     let entries = input
-    .lines()
-    .map(|line| line.parse::<u32>())
-    .collect::<Result<Vec<u32>, ParseIntError>>()
-    .expect("string parsing error");
+        .lines()
+        .map(|line| line.parse::<u32>())
+        .collect::<Result<Vec<u32>, ParseIntError>>()
+        .expect("string parsing error");
 
     if let Some(answer) = find_triple_answer(&entries, YEAR) {
         println!("{}", answer);
@@ -50,7 +49,7 @@ mod tests {
 
     #[test]
     fn test_puzzle_1() {
-        let input = vec![1721, 979 ,366, 299, 675, 1456];
+        let input = vec![1721, 979, 366, 299, 675, 1456];
         let expected = 514579;
 
         let response = super::find_pair(&input, YEAR).expect("Function failed");
@@ -59,7 +58,7 @@ mod tests {
 
     #[test]
     fn test_puzzle_2() {
-        let input = vec![1721, 979 ,366, 299, 675, 1456];
+        let input = vec![1721, 979, 366, 299, 675, 1456];
         let expected = 241861950;
 
         let response = super::find_triple_answer(&input, YEAR).expect("Function failed");

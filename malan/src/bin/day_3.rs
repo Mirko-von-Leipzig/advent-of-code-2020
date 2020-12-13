@@ -1,8 +1,7 @@
 use core::panic;
 
-
 // Can define enumarations that represent things other than isize using repr.
-// Here we define the representation as u8, which allows as to use 
+// Here we define the representation as u8, which allows as to use
 // 1 byte ASCII characters as the enum
 #[repr(u8)]
 #[derive(Debug)]
@@ -20,8 +19,8 @@ enum Direction {
 
 struct GeographicalMap {
     layout: String,
-    rank: usize,    // current rank, or row
-    file: usize,    // current file, or column
+    rank: usize, // current rank, or row
+    file: usize, // current file, or column
 }
 
 impl GeographicalMap {
@@ -51,7 +50,7 @@ impl GeographicalMap {
         match *terrain_char {
             b'.' => Some(Terrain::Open),
             b'#' => Some(Terrain::Tree),
-            _ => panic!("Unknown terrain type!")
+            _ => panic!("Unknown terrain type!"),
         }
     }
 }
@@ -66,11 +65,10 @@ fn main() {
 }
 
 fn part_1(map: &mut GeographicalMap) {
-    
     use Direction::*;
-    
+
     let cheap_toboggan = vec![RIGHT, RIGHT, RIGHT, DOWN];
-    
+
     let mut tree_count: usize = 0;
 
     loop {
@@ -83,26 +81,22 @@ fn part_1(map: &mut GeographicalMap) {
                     Terrain::Tree => tree_count += 1,
                     Terrain::Open => (),
                 };
-
-            } 
-            None => {
-                break
             }
+            None => break,
         }
     }
     println!("Finished. Tree count is: {}", tree_count);
 }
 
 fn part_2(map: &mut GeographicalMap) {
-    
     use Direction::*;
-    
+
     let slope1: Vec<Direction> = vec![RIGHT, DOWN];
     let slope2: Vec<Direction> = vec![RIGHT, RIGHT, RIGHT, DOWN];
     let slope3: Vec<Direction> = vec![RIGHT, RIGHT, RIGHT, RIGHT, RIGHT, DOWN];
     let slope4: Vec<Direction> = vec![RIGHT, RIGHT, RIGHT, RIGHT, RIGHT, RIGHT, RIGHT, DOWN];
     let slope5: Vec<Direction> = vec![RIGHT, DOWN, DOWN];
-    
+
     let mut tree_counts = Vec::new();
     let vehicles = vec![slope1, slope2, slope3, slope4, slope5];
 
@@ -118,10 +112,8 @@ fn part_2(map: &mut GeographicalMap) {
                         Terrain::Tree => tree_count += 1,
                         Terrain::Open => (),
                     };
-                } 
-                None => {
-                    break
                 }
+                None => break,
             }
         }
         tree_counts.push(tree_count);
