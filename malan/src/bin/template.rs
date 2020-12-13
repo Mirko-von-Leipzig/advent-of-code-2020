@@ -1,29 +1,24 @@
 fn main() {
     println!("Day X");
-    let _input_string = include_str!("../inputs/0X.txt");
+    let _input_string = include_str!("../inputs/XX.txt");
     puzzle_1(_input_string);
     puzzle_2(_input_string);
 }
 
 fn puzzle_1(input: &str) {
-    println!("Running Puzzle 1")
+    println!("Running Puzzle 1\n{}", input);
 }
 
 fn puzzle_2(input: &str) {
-    
-    println!("Running Puzzle 2")
+    println!("Running Puzzle 2\n{}", input);
 }
 
 #[cfg(test)]
 mod tests {
     
     #[test]
-    fn test_puzzle_1() {
-        assert!(true);
-    }
+    fn test_puzzle_1() {}
 
     #[test]
-    fn test_puzzle_2() {
-        assert!(true);
-    }
+    fn test_puzzle_2() {}
 }
