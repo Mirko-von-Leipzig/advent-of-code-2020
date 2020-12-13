@@ -5,12 +5,11 @@ fn main() {
     puzzle_2(_input_string);
 }
 
-fn puzzle_1(input: &str) {
+fn puzzle_1(_input: &str) {
     println!("Running Puzzle 1")
 }
 
-fn puzzle_2(input: &str) {
-    
+fn puzzle_2(_input: &str) {
     println!("Running Puzzle 2")
 }
 
@@ -18,12 +17,8 @@ fn puzzle_2(input: &str) {
 mod tests {
     
     #[test]
-    fn test_puzzle_1() {
-        assert!(true);
-    }
+    fn test_puzzle_1() {}
 
     #[test]
-    fn test_puzzle_2() {
-        assert!(true);
-    }
+    fn test_puzzle_2() {}
 }
