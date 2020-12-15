@@ -6,3 +6,7 @@ edition = "2018"
 
 [dependencies]
 regex = "1.4.2"
+
+[lib]
+name = "mirko"
+path = "src/lib/lib.rs"
