@@ -119,10 +119,10 @@ It includes the following checks:
 
 | Day |     Mirko    |     Malan    |     Evert    |
 | :-: | :----------: | :----------: | :----------: |
-| 01  | :star::star: |              |              |
-| 02  | :star::star: |              |              |
-| 03  | :star::star: |              |              |
-| 04  | :star::star: |              |              |
+| 01  | :star::star: | :star::star: |              |
+| 02  | :star::star: | :star::star: |              |
+| 03  | :star::star: | :star::star: |              |
+| 04  | :star::star: | :star::star: |              |
 | 05  | :star::star: |              |              |
 | 06  | :star::star: |              |              |
 | 07  | :star::star: |              |              |
